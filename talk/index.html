@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8">
+	<title>IoT - Heute und Morgen - Sommerakademie Leysin 2016 - Studienstiftung des deutschen Volkes</title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="author" content="Niki Kilbertus, Florian Rappl">
+	<meta name="abstract" content="Vor 20 Jahren war ein Rechner im eigenen Heim noch ungewöhnlich, heute kommen wir teilweise nicht mehr ohne den Rechner in der Hosentasche zurecht. In Zukunft werden sich viele Alltagsgegenstände in kleine Computer verwandeln, die miteinander kommunizieren und unser Leben einfacher und effizienter machen sollen. Stimmt das wirklich? Welche Konsequenzen hat die Digitalisierung auf unser Leben und welchen neuen Gefahren sind wir dadurch ausgesetzt?">
+	<link rel="stylesheet" href="styles/screen-16x10.css">
+	<style>
+		#Cover h3 {
+			color: rgba(244, 125, 31, 1.0);
+			text-align: center;
+			font-size: 56px;
+			margin-bottom: 50px;
+			background: rgba(255, 255, 255, 0.9);
+			padding: 0 20px;
+		}
+		#Cover p {
+			font-size: 0.7em;
+			color: rgba(244, 125, 31, 1.0);
+			margin: 0 20px;
+		}
+		img.shift-left {
+			padding-right: 40%;
+		}
+		img.shift-right {
+			margin-left: 20%;
+		}
+		img.shift-top {
+			padding-bottom: 40%;
+		}
+		img.shift-bottom {
+			margin-top: 10%;
+		}
+		img.cover+figcaption {
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+		div.left, div.right {
+			width: 49%;
+		}
+		div.left {
+			float: left;			
+		}
+		div.right {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+<body class="shower list">
+	<header class="caption">
+		<h1>IoT - Heute und Morgen</h1>
+		<p>Dr. Florian Rappl, Niki Kilbertus</p>
+	</header>
+	<section class="slide white" id="Cover">
+		<p class="place top left">Dr. Florian Rappl<br>Niki Kilbertus</p>
+		<p class="place top right" align="right">Sommerakademie Leysin 2016<br>Arbeitsgruppe 2</p>
+		<h3 class="place bottom">Heute und Morgen</h3>
+		<img src="pictures/cover.jpg" alt="" class="cover h">
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/ancient.jpg" alt="" class="cover">
+			<img src="pictures/no-internet.png" class="next" style="position: relative; left: 400px; top: 50px">
+		</figure>
+		<footer class="footer">
+			Vor 20 Jahren war das Internet noch keine große Sache - Windows 95 dagegen schon (keine Internetunterstützung in der ersten Version).
+		</footer>
+	</section>
+	<section class="slide black" style="background-color: #00222A">
+		<figure>
+			<img src="pictures/web20.png" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			Das Web 2.0 war vor 10 Jahren ein Renner - soziale Netzwerke wie Twitter oder Facebook sind Kinder dieser Zeit.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/internet-users.png" alt="" class="cover">
+			<figcaption class="black place bottom right">
+				&copy; 2015, ICT
+			</figcaption>
+		</figure>
+		<footer class="footer">
+			Seitdem hat sich die westliche Welt ins Internet begeben.
+		</footer>
+	</section>
+	<section class="slide">
+		<h2>Was ist IoT?</h2>
+		<center>
+			<figure>
+				<img src="pictures/what-is-iot.png" alt="" width=600>
+			</figure>
+		</center>
+		<footer class="footer">
+			<ul>
+				<li>Pervasive (überall eingebettet)</li>
+				<li>Ubiquitous (quasi unsichtbar)</li>
+				<li>Heterogenic (viele verschiedene Technologien im Austausch miteinander)</li>
+				<li>Scale (viel größer als das derzeitige Internet)</li>
+			</ul>
+		</footer>
+	</section>
+	<section class="slide">
+		<figure>
+			<img src="pictures/oic_logo.jpg" alt="" width=350>
+			<blockquote>
+				<p>Das Internet der Dinge wird bis zum Jahr 2020 mehr als 30 Milliarden Geräte online gebracht haben.</p>
+			</blockquote>
+			<figcaption>Open Interconnect Consortium</figcaption>
+		</figure>
+	</section>
+	<section class="slide white">
+		<h2>IPv4 vs IPv6</h2>
+		<div class="left">
+			<strong>IPv4</strong>
+			<ul>
+				<li>Beispiel:<br><code>192.168.1.23</code></li>
+				<li>2<sup>32</sup> Adressen</li>
+			</ul>
+			<img src="pictures/humans.jpg" alt="" class="next">
+		</div>
+		<div class="right">
+			<strong>IPv6</strong>
+			<ul>
+				<li>Beispiel:<br><code>2001:db8:0:8d3:0:8a2e:70:7344</code></li>
+				<li>2<sup>128</sup> Adressen</li>
+			</ul>
+			<img src="pictures/sand.jpg" alt="" class="next">
+		</div>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/myvessyl.png" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			MyVessyl - der intelligente Trinkbecher.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/hapifork.png" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			HapiFork - USB Gabel.
+		</footer>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/bttoothbrush.jpg" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			Oral B mit Bluetooth - eine Zahnbürste mit Rededrang.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/sleep-analysis.png" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			Sleeping analysis by the Microsoft Health platform.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure style="height: 400px">
+			<img src="pictures/simpsons-1.png" alt="" class="cover shift-left">
+			<img src="pictures/simpsons-2.png" alt="" class="cover shift-right">
+			<figcaption class="place bottom right">
+				Simpsons (1992): Brother, Can You Spare Two Dimes? [8F23]
+			</figcaption>
+		</figure>
+		<ul>
+			<li class="next">Wieviel kostet die Entwicklung eines Babyübersetzers?</li>
+			<li class="next"><strong>Hardware &leq; $80 plus schlaflose Nächte.</strong></li>
+		</ul>
+		<footer class="footer">
+			Eine einfache Idee - der intelligente Babymonitor.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/babyzen.jpg" alt="" class="cover shift-top">
+			<img src="pictures/backend.png" alt="" class="cover shift-bottom next">
+		</figure>
+		<footer class="footer">
+			Gesamte Prototyp-Hardwarekosten ca. $80.
+		</footer>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Smart Everything</h2>
+	</section>
+	<section class="slide">
+		<figure>
+			<img src="pictures/kevin-ashton.png" alt="" width=150>
+			<blockquote>
+				<p>If we had computers that knew everything [...] using data they gathered without any help from us, we would be able to track and count everything, and greatly reduce waste, loss, and cost.</p>
+			</blockquote>
+			<figcaption>Kevin Ashton</figcaption>
+		</figure>
+	</section>
+	<section class="slide white">
+		<h2>Auditorium</h2>
+		<canvas id="chart" width=850 height=400></canvas>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/smarthome-devices.jpg" alt="" class="cover">
+			<img src="pictures/smarthome-ui-1.png" alt="" class="next cover shift-left">
+			<img src="pictures/smarthome-ui-2.png" alt="" class="next cover shift-right">
+		</figure>		
+	</section>
+	<section class="slide white">
+		<iframe src="https://webchat.botframework.com/embed/smarthomebot?s=YqXjYMQiY3E.cwA.Nq4.Vsr_QtcACAxPyXFbrP5ofxbAfMkomMapMi4jqpkmgGc"
+				style="position: absolute; height: 520px; width: 700px; top: 0; bottom: 0; left: 0; right: 0; margin: auto; border: none"></iframe>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/iot-growth.png" alt="" class="cover">
+			<figcaption class="black place bottom right">
+				&copy; 2014, Group SJR
+			</figcaption>
+			<footer>
+				Detailed video, see https://vimeo.com/94011734.
+			</footer>
+		</figure>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/self-driving-car.jpg" alt="" class="cover">
+			<figcaption class="white place bottom right">
+				&copy; 2016, Google Corp.
+			</figcaption>
+			<footer>
+			</footer>
+		</figure>
+	</section>
+	<section class="slide white">
+		<figure>
+			<video src="videos/google_car.mp4" alt="" class="cover" controls>
+			</video>
+			<figcaption class="white place bottom right">
+				&copy; 2016, Google Corp.
+			</figcaption>
+			<footer>
+			</footer>
+		</figure>
+	</section>
+	<section class="slide">
+		<h2>Abstandsmessung</h2>
+		<span style="font-size: 4em; color: #4caf50" id="distance">32cm</span>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Problems</h2>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/hack-unlock-car-door.png" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			Recently, hackers found a way to unlock VW cars.
+		</footer>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/privacy.jpg" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			The available data unlocks the whole identity.
+		</footer>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/scalability.jpg" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			Scalablity - how do we reach the 50 billion devices.
+		</footer>
+	</section>
+	<section class="slide">
+		<h2>Verbrauch eines Datencenters</h2>
+		<table>
+		<tr>
+			<th scope="col">Jahr</th>
+			<th>2015</th>
+			<th>2019</th>
+			<th>2023</th>
+			<th>2027</th>
+		</tr>
+		<tr>
+			<th scope="row">Speicher (PB)</th>
+			<td>300</td>
+			<td>4676</td>
+			<td>42088</td>
+			<td>378792</td>
+		</tr>
+		<tr>
+			<th scope="row">Gesamt (GWh)</th>
+			<td>779.8</td>
+			<td>1004.7</td>
+			<td>1226.1</td>
+			<td>1635.6</td>
+		</tr>
+		<tr>
+			<th scope="row">Kühlung (GWh)</th>
+			<td>38.99</td>
+			<td>86.13</td>
+			<td>264.26</td>
+			<td>374.89</td>
+		</tr>
+		<tr>
+			<th scope="row">Effizienz (GFlop/J)</th>
+			<td>2.4</td>
+			<td>10</td>
+			<td>24</td>
+			<td>47.9</td>
+		</tr>
+		</table>
+		<figcaption>
+			Quelle: ITRS 2.0 Executive Report, 2015
+		</figcaption>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Going Green</h2>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/tree.jpg" alt="" class="cover">
+		</figure>
+		<footer class="footer">
+			Finally, nature gives us something back.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/hardware.png" alt="" class="cover">			
+		</figure>
+		<footer>
+			Eine Auswahl von effizienten Einplatinenrechnern.
+		</footer>
+	</section>
+	<section class="slide white">
+		<figure>
+			<img src="pictures/hot-water-cooling.png" alt="" class="cover">			
+		</figure>
+		<footer>
+			Durch Warmwasserkühlung lassen sich Großrechner effizient betreiben.
+		</footer>
+	</section>
+	<section class="slide black">
+		<figure>
+			<img src="pictures/qpace2.jpg" alt="" class="cover">			
+		</figure>
+		<footer>
+			QPACE 2 ist ein energieeffizienter Superrechner - gekühlt mit Warmwasser.
+		</footer>
+	</section>
+	<section class="slide">
+		<h2>Fazit</h2>
+		<ul>
+			<li>In Zukunft werden alle Geräte vernetzt werden</li>
+			<li>Natürliche Interaktion, z. B. über Sprache, wird standardisiert</li>
+			<li>Die Datenzentren müssen deutlich effizienter werden</li>
+			<li>Neue Kommunikationsstandards werden gebraucht</li>
+		</ul>
+	</section>
+	<div class="progress"></div>
+	<script src="scripts/shower.min.js"></script>
+	<script src="scripts/shower-notes.min.js"></script>
+	<script src="scripts/Chart.bundle.min.js"></script>
+	<script>
+	    function request (url, callback) {
+			var request = new XMLHttpRequest();
+			request.onreadystatechange = function () {
+				var DONE = this.DONE || 4;
+
+				if (this.readyState === DONE) {
+					callback(this.responseText);
+				}
+			};
+			request.open('GET', url, true);
+			request.send(null);	
+	    }
+
+		(function () {
+			var interval = 500;
+			var distance = document.querySelector('#distance');
+			var canvas = document.querySelector('#chart');
+
+			var pollDistance = setInterval(function () {
+				var slide = distance.parentElement;
+
+				if (slide.classList.contains('active')) {
+					request('http://192.168.10.35:8081/distance', function (responseText) {
+						distance.textContent = ((responseText * 1) || 50).toFixed(2) + 'cm';
+					});
+				}
+			}, interval);
+
+			var pollWeather = setInterval(function () {
+				var slide = canvas.parentElement;
+
+				if (slide.classList.contains('active')) {
+					clearInterval(pollWeather);
+
+					request('http://192.168.10.35:8081/weather', function (responseText) {
+						var data = JSON.parse(responseText);
+						var chart = new Chart(canvas, {
+							type: 'line',
+							data: {
+								datasets: [
+									{
+										label: 'Temperature',
+										data: data.temperature,
+										borderColor: 'rgba(255,0,0,1.0)',
+										yAxisID: 'TEMP_AX',
+										borderWidth: 3,
+										fill: false,
+										pointRadius: 0
+									},
+									{
+										label: 'Humidity',
+										borderColor: '#4caf50',
+										data: data.humidity,
+										borderWidth: 3,
+										pointRadius: 0,
+										yAxisID: 'HUM_AX',
+										fill: false
+									}
+								]
+							},
+							options: {
+								responsive: false,
+								scales: {
+									xAxes: [{
+										type: 'time',
+										unit: 'day',
+										time: {
+											displayFormats: {
+											   'day': 'MMM DD'
+											}
+										},
+										gridLines: {
+											display: false
+										}
+									}],
+									yAxes: [
+										{
+											id: 'TEMP_AX',
+											scaleLineColor: 'rgba(255,0,0,1.0)',
+											ticks: {
+												suggestedMax: 30,
+												min: 15,
+												stepSize: 1,
+												fontColor: 'rgba(255,0,0,1.0)'
+											},
+											gridLines: {
+												display: true,
+											},
+											 scaleLabel: {
+												display: true,
+												labelString: "Temperature in °C",
+												fontColor: 'rgba(255,0,0,1.0)'
+											}
+										},
+										{
+											id: 'HUM_AX',
+											position: 'right',
+											scaleLine: {
+												display: false
+											},
+											gridLines: {
+												display: true,
+												zeroLineColor: 'rgba(255,0,0,1.0)'
+											},
+											ticks: {
+												max: 100,
+												min: 40,
+												stepSize: 4,
+												fontColor: '#4caf50'
+											},
+											scaleLabel: {
+												display: true,
+												labelString: "Humidity in %",
+												fontColor: '#4caf50'
+											}
+										}
+
+									]
+								}
+							}
+						});
+					});
+				}
+			}, interval);
+		})();
+	</script>
+	<!-- Copyright © 2016 Niki Kilbertus, Florian Rappl -->
+</body>
+</html>
